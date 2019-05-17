@@ -1,0 +1,46 @@
+{
+  "name": "cash",
+  "version": "1.0.0",
+  "description": "Petty Cash Account Management",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create": "claudia create --api-module bot --region us-east-1 --timeout 120 --allow-recursion --configure-slack-slash-command",
+    "update-add-recursion": "claudia update --timeout 120 --allow-recursion",
+    "add-slack-slash-command": "claudia update --configure-slack-slash-command",
+    "update-include-env-vars": "claudia update --set-env-from-json ../env/cash.env.json",
+    "update": "claudia update",
+    "start": "ntl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@192.168.1.152:/opt/git/cash.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "node.js",
+    "claudiajs",
+    "airtable",
+    "slack"
+  ],
+  "author": "Pedro J. Salinas",
+  "license": "MIT",
+  "dependencies": {
+    "airtable": "^0.5.10",
+    "aws-sdk": "^2.432.0",
+    "claudia-bot-builder": "^4.5.0",
+    "dotenv": "^7.0.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "ntl": "^3.1.1",
+    "prettier": "^1.16.4"
+  }
+}
